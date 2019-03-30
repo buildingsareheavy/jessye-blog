@@ -3,7 +3,7 @@ backend:
   repo: buildingsareheavy/jessye-blog
 
 media_folder: "static/content/posts/images"
-public_folder: "./images"
+public_folder: "images"
 
 collections:
   - name: "posts"
