@@ -2,8 +2,8 @@ backend:
   name: github
   repo: buildingsareheavy/jessye-blog
 
-media_folder: "/content/posts/images"
-public_folder: "/content/posts/images"
+media_folder: "static/content/posts/images"
+public_folder: "./images"
 
 collections:
   - name: "posts"
