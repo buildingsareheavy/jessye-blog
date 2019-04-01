@@ -2,20 +2,18 @@ backend:
   name: github
   repo: buildingsareheavy/jessye-blog
 
-# This is the default according to https://dev.to/mittalyashu/how-to-integrate-netlify-cms-with-gridsome-188a
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: ""
+public_folder: ""
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "static/content/posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "string" }
-      - { label: "Cover Image", name: "cover", widget: "image" }
       - { label: "Publish Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
 #
