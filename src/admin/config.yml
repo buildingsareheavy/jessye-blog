@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: buildingsareheavy/jessye-blog
 
 media_folder: "static/content/posts/images"
 public_folder: "content/posts/images"
@@ -17,17 +16,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "string" }
-      - { label: "Cover", name: "cover-image", widget: "image" }
+      - {
+          label: "Cover Image",
+          name: "cover-image",
+          widget: "image",
+          optional: true,
+        }
       - { label: "Publish Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
-  # Our pages e.g. About
-  - name: "pages"
-    label: "Pages"
-    folder: "content/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "date" }
-      - { label: "Body", name: "body", widget: "markdown" }
-#
+  #
