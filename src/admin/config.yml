@@ -6,21 +6,28 @@ media_folder: "static/content/posts/images"
 public_folder: "content/posts/images"
 
 publish_mode: editorial_workflow
-display_url: https://brave-easley-41346b.netlify.com/
-site_url: https://brave-easley-41346b.netlify.com/
 show_preview_links: true
 
 collections:
   - name: "posts"
     label: "Posts"
     folder: "content/posts"
-    preview_path: preview/{{slug}}
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "string" }
       - { label: "Cover", name: "cover-image", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  # Our pages e.g. About
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
 #
