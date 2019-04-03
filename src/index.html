@@ -35,8 +35,13 @@
 
         setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
       })();
+    </script>
 
-{# Add the Netlify Identity Widget #}
+    ${app}
+    ${scripts}
+
+<script>
+// Add the Netlify Identity Widget
  if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
@@ -46,10 +51,7 @@
       }
     });
   }
+</script>
 
-    </script>
-
-    ${app}
-    ${scripts}
   </body>
 </html>
