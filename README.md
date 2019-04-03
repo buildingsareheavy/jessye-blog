@@ -1,8 +1,11 @@
 # Gridsome Blog Starter
 
+Modified from the official [Gridsome Starter Blog](https://github.com/gridsome/gridsome-starter-blog), and added [Netlify CMS](https://www.netlifycms.org/) integration.
+
 > A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
 
 ## Features
+
 - Beautiful and simple design.
 - Markdown for content.
 - Tags support.
