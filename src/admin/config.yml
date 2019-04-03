@@ -5,10 +5,15 @@ backend:
 media_folder: "static/content/posts/images"
 public_folder: "content/posts/images"
 
+publish_mode: editorial_workflow
+display_url: localhost:8080/
+site_url: localhost:8080/
+show_preview_links: true
+
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "static/content/posts"
+    folder: "content/posts"
     preview_path: preview/{{slug}}
     create: true
     slug: "{{slug}}"
