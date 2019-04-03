@@ -6,8 +6,8 @@ media_folder: "static/content/posts/images"
 public_folder: "content/posts/images"
 
 publish_mode: editorial_workflow
-display_url: localhost:8080/
-site_url: localhost:8080/
+display_url: https://brave-easley-41346b.netlify.com/
+site_url: https://brave-easley-41346b.netlify.com/
 show_preview_links: true
 
 collections:
