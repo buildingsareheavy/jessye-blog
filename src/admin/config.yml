@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: buildingsareheavy/jessye-blog
 
 media_folder: "static/content/posts/images"
