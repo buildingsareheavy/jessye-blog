@@ -7,6 +7,7 @@
 
       <div class="header__right">
         <g-link class="navigation" :to="{ name: 'info' }">Info</g-link>
+        <g-link class="navigation" :to="{ name: 'videos' }">Video</g-link>
         <ToggleTheme/>
       </div>
     </header>
