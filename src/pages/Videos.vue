@@ -3,9 +3,19 @@
     <!-- Author intro -->
     <Author :show-title="true"/>
 
-    <div class="videos">
-      <div class="content-box">
-        <p>Below are the vimeo videos.</p>
+    <div class="video">
+      <div class="post-card content-box" v-for="video in videos" :key="video.link">
+        <p class="video-name">{{video.name}}</p>
+        <p>{{video.description}}</p>
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe
+            :src="'https://player.vimeo.com/video/' + video.link.slice(18) + '?title=0&byline=0&portrait=0'"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </Layout>
@@ -39,32 +49,33 @@ export default {
   metaInfo: {
     title: "Videos"
   },
-  data: function() {
-    return {
-      videos: []
-    };
+  props: {
+    videos: Array
   },
   created() {
     // Make a request for a user with a given ID
+    // https://developer.vimeo.com/api/reference/videos#get_videos
     axiosInstance
       .get("/users/97249929/videos")
-      .then(function(response) {
+      .then(response => {
         // handle success
         console.log(response.data);
+        this.videos = response.data.data;
       })
-      .catch(function(error) {
+      .catch(error => {
         // handle error
         console.log(error);
-      })
-      .then(function() {
-        // always executed
       });
   }
 };
 </script>
 
 <style lang="scss">
-.videos {
+.video {
+  &-name {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
 }
 </style>
 

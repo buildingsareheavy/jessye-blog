@@ -4,7 +4,7 @@
     <Author :show-title="true"/>
 
     <div class="info">
-      <div class="content-box">
+      <div class="post-card content-box">
         <p>This is text.</p>
       </div>
     </div>
