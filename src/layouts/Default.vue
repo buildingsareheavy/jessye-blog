@@ -7,6 +7,7 @@
       </div>
 
       <div class="header__right">
+        <g-link class="navigation" to="/">Videos</g-link>
         <g-link class="navigation" :to="{ name: 'info' }">Info</g-link>
         <g-link class="navigation" :to="{ name: 'interviews' }">Interviews</g-link>
       </div>
