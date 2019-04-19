@@ -4,9 +4,10 @@
 
     <h1 v-if="showTitle" class="author__site-title">{{ $static.metaData.siteName }}</h1>
 
-    <p
-      class="author__intro"
-    >A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.</p>
+    <p class="author__intro">
+      A collection of videos and interviews
+      <br>by Jessye Ebbinghouse
+    </p>
   </div>
 </template>
 
@@ -43,7 +44,8 @@ export default {
   }
 
   &__site-title {
-    font-size: 1.5em;
+    font-size: 1.75em;
+    color: var(--body-color);
   }
 
   &__links {

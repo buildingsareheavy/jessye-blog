@@ -2,20 +2,21 @@
   <div id="app">
     <header class="header">
       <div class="header__left">
-        <Logo v-if="showLogo"/>
+        <!-- <Logo v-if="showLogo"/> -->
+        <ToggleTheme/>
       </div>
 
       <div class="header__right">
+        <g-link class="navigation" to="/">Videos</g-link>
         <g-link class="navigation" :to="{ name: 'info' }">Info</g-link>
-        <g-link class="navigation" :to="{ name: 'videos' }">Video</g-link>
-        <ToggleTheme/>
+        <g-link class="navigation" :to="{ name: 'interviews' }">Interviews</g-link>
       </div>
     </header>
-
-    <main class="main">
-      <slot/>
-    </main>
-
+    <transition name="fade" appear>
+      <main class="main">
+        <slot/>
+      </main>
+    </transition>
     <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}.</span>
       <span class="footer__links">
@@ -50,6 +51,8 @@ export default {
   padding: 0 calc(var(--space) / 2);
   top: 0;
   z-index: 10;
+  background: var(--bg-content-color);
+  box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.03);
 
   &__left,
   &__right {
@@ -61,6 +64,12 @@ export default {
     padding: 0 1rem;
     text-decoration: none;
     color: currentColor;
+
+    &.active--exact.active {
+      border-bottom: 1px solid var(--body-color);
+      margin-bottom: -1px;
+      transition: 0.2s all;
+    }
   }
 
   @media screen and (min-width: 1300px) {
@@ -89,6 +98,13 @@ export default {
 
   a {
     color: currentColor;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  &-active {
+    transition: opacity 1s;
   }
 }
 </style>
