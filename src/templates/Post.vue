@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :show-logo="false">
     <div class="post-title">
       <h1 class="post-title__text">{{ $page.post.title }}</h1>
 
@@ -22,7 +22,7 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <!-- <Author class="post-author" /> -->
+    <Author class="post-author" :show-title="false"/>
   </Layout>
 </template>
 
