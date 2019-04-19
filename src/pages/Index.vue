@@ -6,7 +6,6 @@
     <div class="video">
       <div class="post-card content-box" v-for="video in videos" :key="video.link">
         <p class="video-name">{{video.name}}</p>
-        <p>{{video.description}}</p>
         <transition name="fade" appear>
           <div class="video-iframe">
             <iframe
@@ -17,6 +16,7 @@
             ></iframe>
           </div>
         </transition>
+        <p class="video-description">{{video.description}}</p>
       </div>
     </div>
   </Layout>
@@ -87,6 +87,9 @@ export default {
       width: 100%;
       height: 100%;
     }
+  }
+  &-description {
+    margin: 1.75rem 0 0 0;
   }
 }
 </style>
