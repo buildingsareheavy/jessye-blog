@@ -1,7 +1,7 @@
 <template>
   <Layout :show-logo="false">
     <!-- Author intro -->
-    <Author :show-title="true"/>
+    <Author :show-title="false"/>
 
     <div class="video">
       <div class="post-card content-box" v-for="video in videos" :key="video.link">

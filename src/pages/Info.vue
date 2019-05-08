@@ -1,12 +1,12 @@
 <template>
   <Layout :show-logo="false">
     <!-- Author intro -->
-    <Author :show-title="true"/>
+    <Author :show-title="false"/>
 
     <div class="info">
       <div class="post-card content-box">
         <p>This is where your bio will go.</p>
-        <p>Maybe a pohot below, maybe not.</p>
+        <p>Maybe a photo below, maybe not.</p>
       </div>
     </div>
   </Layout>

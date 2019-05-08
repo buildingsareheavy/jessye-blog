@@ -9,7 +9,7 @@
       <div class="header__right">
         <g-link class="navigation" to="/">Videos</g-link>
         <g-link class="navigation" :to="{ name: 'info' }">Info</g-link>
-        <g-link class="navigation" :to="{ name: 'interviews' }">Interviews</g-link>
+        <!-- <g-link class="navigation" :to="{ name: 'interviews' }">Interviews</g-link> -->
       </div>
     </header>
     <transition name="fade" appear>
@@ -43,6 +43,34 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "Questa";
+  src: url("../assets/fonts/Questa_Sans.woff");
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url("../assets/fonts/Museo_Slab.woff");
+}
+
+*,
+a,
+p,
+span,
+footer {
+  font-family: "Questa", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p.video-name {
+  font-family: "Museo", monospace;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
